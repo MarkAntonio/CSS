@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .card{
+            width: 400px;
+            height: 200px;
+            border: 4px solid rebeccapurple;
+            float: left;
+            text-align: center;
+            position: relative;
+        }
+        .card2{
+            clear: left;
+            float: left;
+            border: 4px solid rebeccapurple;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-right: 150px;
+            padding-left: 150px;
+        }
+        .c1{
+            background-color: green;
+            line-height: 200px;
+        }
+        .c2{
+            background-color: rgb(93, 93, 199);
+            position: absolute;
+            top: 50%; /*Aqui ele está alinhando com o início da div do texto na vertical com o pai*/
+            left: 50%; /*Aqui ele está alinhando com o início da div do texto na horizontal com o pai*/
+            transform: translate(-50%, -50%); /*Aqui ele serve para deixar a div do texto no meio;*/
+        }
+        /*
+        Com o line-height eu consigo alinhar meu texto verticalmente. porém para isso eu preciso sabre o 
+        tamanho da div que ele está dentro; não dá pra usar o tamanho 100% (o tamanho baseado no tamanho do pai)
+
+        -Lembrando, para usar o position absolute para que eu possa usar a propriedade top, eu preciso que o elemento pai esteja com o position
+        relative, porque se não ele vai procurar o position relative dos elementos anteriores e se ele não achar, ele ficar relacionado com o tamanho
+        do body;
+
+        o transform serve para eu alinhar o texto também, o transform: translateY modifica no eixo vertical, o transform translateX modifica
+        no eixo horizontal;
+        quando eu for colocar o valor, se for positivo ele modifica para baixo, se for negativo ele modifica para cima.
+
+        se eu usar o translateY ou o translate X e depois usar outro em seguida, ele vai considerar só o que veio depois.
+        então para alinhar os dois de uma vez eu uso somente o transform translate(x,y) passando os dois argumentos.
+        */
+    </style>
+    <div class="card">
+        <div class="c1">
+            Marquinhos de Jesus
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="c2">
+            O teclarinetista abençoado
+        </div>
+    </div>
+
+    <div class="card2">
+        <div style="background-color:red;">
+           Só Jesus! Salva, Cura, Liberta, Batiza e leva o homem para o Céu.
+        </div>
+    </div>
+</body>
+</html>

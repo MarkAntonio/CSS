@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+</head>
+<body>
+    <style>
+        body{
+            font-size: 1.5rem;
+        }
+        /*
+            Display - é a propriedade que é responsável por dizer como cada elementro
+            vai ser mostrado na tela 
+         Existem displays: 
+            -inline: o elemento permanece na mesma linha, mas não pode ser redimencionado (width e height) 
+            -block: o elemento "pula" de linha, mas pode ser redimensionado
+            -flex: O elemendo é colocado um ao lado do outro dentro da div com o display flex
+            -none: é como se o elemento nunca tivesse sido colocado na tela
+            -inline-block: tem as características do display inline, mas permite que eu altere a altura e largura
+
+            div, p: são por padrão display block
+            span: é por padrão display inline
+            img: é por padrão display inline-block
+
+            -o display block ocupa a linha inteira
+            -o display inline ocupa somente o espaço do elemento
+            Eu não posso ter uma div dentro de uma parágrafo, pois como ambas
+            têm o display block, uma interrompe o fluxo da outra.
+            então se eu colocar um parágrafo com o background vermelho e dentro dele
+            eu colocar uma div com outra cor, a div quebra o fluxo e o final do parágrafo fica sem cor.
+
+            então não posso ter uma div dentro de um parágrafo e nem um parágrafo dentro de outro parágrafo.
+            a propriedade visibility não tem nada a ver com essas.
+            mas se eu colocar visibility:hidden; é como se o elemento estivesse ocupando aquele
+            espaço, mas ele estará invisível.
+        */
+    </style>
+    <div>
+        <div>Esta é uma div normal</div>
+        <div>
+            E aqui a história <div style = "background-color: red;">
+            Div dentro</div> continua
+        </div>
+    </div>
+   
+    <div>
+        <p> Este é um parágrafo normal</p>
+        <p> E aqui a história continua</p>
+    </div>
+
+    <p>
+        Aqui tenho o início de um parágrafo <span> um SPAN
+        no meio</span> e o fim do parágrafo.
+    </p>
+
+    <p>
+        Aqui tenho o inicio de um parágrafo <div>uma div
+        no meio</div> e o fim do parágrafo.
+    </p>
+    <p>
+        Aqui tenho o inicio de um parágrafo 
+        <img src="clarinet.png" width="100px"> e o fim do parágrafo.
+    </p>
+</body>
+</html>

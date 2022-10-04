@@ -1,0 +1,49 @@
+/* Aula 11
+    temos algumas unidades relativas que dependem de onde estão, e herdam certas propriedades 
+    das tags maiores que elas estão dentro. 
+    a unidade "em", é o elemento que é relativo à fonte da classe pai (da qual a tag (menor) está dentro (maior)).
+    se a font da tag maior é 20px, e eu coloco 2em na font da tag menor, a font da tag menor será 40px;
+    se eu coloco o em no width ou height, mesmo assim ele será relativo ao tamanho da fonte da classe pai fonte
+    
+    em - é relativo à font que herdo do mais geral.
+    ex: se eu estou dentro de uma div e coloco que minha fonte é 1 em, então ela vai ter o mesmo tamanho do que a fonte da div,
+    porém se eu coloco 2 em, ela vai ter 2 vezes o tamanho da fonte da div que eu estou dentro.
+
+    rem - é relativo ao tamanho da fonte da tag raiz, que no caso é o html, se eu coloco 1 rem, ele tem o tamanho da fonte,
+    se eu colocar 2em, ele tem o 2 vezes o tamanho da fonte.
+
+    vw - é referente à largura da nossa janela. 1 vw quer dizer que é 1% do tamanho da minha janela.
+    vh - é referente à altura da nossa janela.
+    vmin - é referente à menor dimensão. 
+    vmax - é referente à maior dimensão. 
+    % - é referente mesma propriedade do elemento pai(do elemento que ele estiver dentro).
+
+
+    
+*/
+
+/* 1. 
+.container{
+    background-color:red;
+    width:300px;
+    font-size: 20px;
+}
+.inside{
+    font-size:2em;
+    width:1em;  Esse em do width está relativo ao font-size do inside
+    background-color: blue;
+}
+*/
+
+/*
+2.
+  html{
+            font-size:20px;
+        }
+        .container{
+            font-size:25px;
+        }
+        .inside{
+            font-size:1rem;  faz referência ao tamanho da fonte raiz (que no caso é o html com 16px por padrão)
+        }
+*/

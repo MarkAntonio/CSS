@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style type="text/css">
+        body{
+            font-size: 1.2rem;
+        }
+        .quadrado{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+        .retangle{
+            width: 100px;
+            height: 300px;
+            margin-top: 10px;
+            
+        }
+        .static{
+            position: static;
+        }
+
+        .relative{
+            position: relative;
+          
+        }
+        .fixed{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+        .absolute{
+            position: absolute;
+            left: 30px;
+        }
+        .sticky{
+            position: sticky;
+            top: 10px;
+        }
+        .bg-blue{
+            background-color: blue;
+        }
+        .bg-red{
+            background-color: red;
+        }
+        
+        /*
+        no display inline-block o position padrão é static.
+        obs: no display inline, a div (com a cor do background etc) só aparece se digitar algo dentro.
+
+        a diferença entre o position static e relative é que o relative possui mais propriedades (porém ambos
+        tem a mesma posição)
+        o position relative possui atributos como top, right, left e bottom, que são semelhantes a margin
+        porém eles representam a posição que o elemento vai ter baseado na posição estática (a posição
+        que ele teria caso o position fosse static)
+
+        left = -40px é o mesmo que right = 40px.
+        logo top = 40px é o mesmo que bottom = -40px;
+
+        se houver dois elementos, um position static e outro relative, se eu colocar um entrando dentro do outro
+        o relative sempre vai ficar em cima do static.
+        mas se ambos forem relative, então depende da ordem que eu criei o elemento, o que vem antes fica sempre em baixo
+        do que veio depois.
+
+        Já o position fixed é em relação à janela.
+        por mais que eu role a janela, a posição sempre será mesma.
+        
+        se houver dois elementos, um position fixed e outro relative, se eu colocar um entrando dentro do outro
+        o fixed sempre vai ficar em cima do relative.
+        mas se ambos forem fixed, então depende da ordem que eu criei o elemento, o que vem antes fica sempre em baixo
+        do que veio depois.
+
+        se houver dois positions diferentes, o static sempre fica por baixo dependendo da configuração do atributo (right, left etc)
+        
+        o position absolute tem a posição em relação ao pai do elemento. Se ele não tiver pai, é em relação
+        ao body.
+        para funcionar, o pai dele não pode ser posição static.
+        
+        o position sticky traz um significado diferente para os atributos right, left, top etc.
+        se eu coloco top: 10px ele quer dizer que o elemento não pode ter uma distância menor que 10px do topo.
+        */
+    </style>
+    <div class="relative retangle bg-blue">
+        <div class="absolute quadrado bg-red">
+
+        </div>
+    </div>
+    <div class="static retangle bg-blue">
+        <div class="relative bg-red" style="left:110px; width: 120px; height:200px; overflow: auto;">
+            <div class="quadrado bg-blue"></div>
+            <div class="quadrado bg-blue"></div>
+            <div class="quadrado bg-blue"></div>
+            <div class="sticky quadrado" style="background-color: green"></div>
+            <div class="quadrado bg-blue"></div>
+            <div class="quadrado bg-blue"></div>
+            <div class="quadrado bg-blue"></div>
+            <div class="quadrado bg-blue"></div>
+            <div class="quadrado bg-blue"></div>
+
+
+        </div>
+    </div>
+
+    <div class="static retangle bg-blue">
+
+    </div>
+    <div class="static retangle bg-blue">
+
+    </div>
+    <div class="fixed quadrado bg-red">
+
+    </div>
+    
+    
+</body>
+</html>

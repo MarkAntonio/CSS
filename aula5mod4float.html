@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        p{
+            clear: right;
+        }
+        #i1{
+            float: left;
+        }
+        #i2{
+            float: right;
+        }
+        div{
+            border: 2px solid red;
+            overflow: auto;
+        }
+        ul{
+            float:right;
+
+        }
+        .menu{
+            float: left;
+            list-style: none;
+            margin: 5px;
+            background-color: gray;
+            padding: 10px;
+        }
+        /*
+        o float serve para flutuar a imagem. se eu coloco float left numa imagem do lado de um texto, o texto vai "abraçar" a imagem.
+        a propriedade clear serve para dizer qual lado eu não quero que fique flutuando algum elemento, por exemplo, alguma imagem flutuando
+        num parágrafo.
+
+        por exemplo, caso eu coloque uma imagem e um texto dentro de uma div e a imagem esteja com flutuação e esteja passando da div,
+        se eu colocar overflow auto, na div, a div vai ocupar o tamanho necessário para que a imagem fique dentro.
+
+        com o float também é possível criar menus.
+        */
+    </style>
+    <ul>
+        <li class="menu">Home</li>
+        <li class="menu">Contacts</li>
+        <li class="menu">Schedualing</li>
+    </ul>
+    <div>
+        <img id="i1" src="clarinet.png" href="" width="250px">
+    <p>Texto qualquer Lorem, ipsum dolor sit amet consectetur 
+        adipisicing elit. Officiis hic ab corrupti impedit dolorem cupiditate voluptatibus tenetur vitae repudiandae, 
+        sequi debitis mollitia. Eligendi placeat quo assumenda sunt, soluta earum exercitationem.
+    
+
+</body>
+    </div>
+    
+</html>

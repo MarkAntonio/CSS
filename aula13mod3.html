@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #line{
+            height:10px;
+            background-color: green;
+            }
+        #container{
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        /*
+        margin - distancia o elemento de suas bordas pra fora
+        padding - distancia o elemento de suas bordas pra dentro
+        */
+        .borda{
+            border-width: 5px; /*espessura da borda*/
+            border-style: solid;
+            border-color: rgba(255, 100, 0, 50);
+            border-radius: 50%; /*Arredondamento da borda (se eu coloco 50% ele vira um círculo)
+            Caso eu queira tranformar algo em um círculo, eu preciso só dessa propriedade*/
+        }
+        .quadrado{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+        .borda1{
+            border-style:dashed;
+        }
+        .borda2{
+            border-style:hidden;
+        }
+        .borda3{
+            border-style:groove;
+            border-top-color: red;
+        }
+        .borda4{
+            border-style:double;
+            border-bottom-color:aqua;
+
+        }
+        .borda5{
+            border-style:dotted;
+            border-color: brown green orange blue
+        }
+        .borda6{
+            border-style:solid;
+        }
+        .borda7{
+            border-style:none;
+        }
+        .borda6{
+            border: dashed 10px pink;
+        }
+    </style>
+    <div id="line"></div>
+    <div id="container">
+        <div id="content" style="padding:20px;">Anything to say</div>
+    </div>
+    other txts
+    <div class="borda">
+        conteúdo
+    </div>
+    <div class="quadrado borda"></div>
+     <!-- colocando outra classe junto, ela pega as propriedades como se fosse uma herança-->
+     <div class="borda1">
+        conteudo
+     </div>
+     <div class="borda2">
+        conteudo
+     </div>
+     <div class="borda3">
+        conteudo
+     </div>
+     <div class="borda4">
+        conteudo
+     </div>
+     <div class="borda5">
+        conteudo
+     </div>
+     <div class="borda6">
+        conteudo
+     </div>
+     <div class="borda7">
+        conteudo
+     </div>
+     <div class="borda8">
+        conteudo
+     </div>
+</body>
+</html>
